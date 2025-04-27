@@ -140,7 +140,7 @@
 				<div class="ptr-preloader">
 					<div class="ptr-prel-content">
 						<!-- Hint: You may need to change the img height and opacity to match your logo type. You can do this from the "theme.css" file (find: ".ptr-prel-image"). -->
-						<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/logo-cinedise-light.png" class="ptr-prel-image tt-logo-light" alt="Logo">
+						<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/logo-cinedise-light.png" class="ptr-prel-image tt-logo-light" alt="Logo">
 					</div> <!-- /.ptr-prel-content -->
 				</div> <!-- /.ptr-preloader -->
 			</div>
@@ -178,8 +178,8 @@
 							<div class="tt-logo"> 
 								<a href="index.html">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/logo-cinedise-light.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
-									<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/logo-cinedise-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
+									<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/logo-cinedise-light.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
+									<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/logo-cinedise-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -283,20 +283,29 @@
 					* Use class "ph-content-parallax" to enable content parallax.
 					* Use class "ph-stroke" to enable caption title stroke style.
 					-->
-					<div id="page-header" class="ph-full ph-bg-image ph-image-shadow ph-image-cover-5 ph-content-parallax">
-						<div class="page-header-inner tt-wrap">
+					<div id="page-header" class="ph-full ph-bg-image ph-image-shadow ph-image-cover-5 ph-content-parallax" style="height: 100vh;">
+						<div class="page-header-inner tt-wrap" style="height: 100%;">
 
 							<!-- Begin page header image 
 							============================= -->
 							<div class="ph-image">
 								<div class="ph-image-inner">
 									<video autoplay muted loop playsinline class="ph-video">
-										<source src="https://cinedise-video.s3.eu-north-1.amazonaws.com/web.mp4" type="video/mp4">
+										<source src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/web.mp4" type="video/mp4">
 									</video>
 								</div>
 							</div>
 							<!-- End page header image -->
-							 
+
+							<!-- Begin explore text and arrow -->
+							<div class="explore-section" style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; display: none;">
+								<h1 class="explore-text" style="color: white; font-size: 48px; margin-bottom: 20px; font-weight: 300;">Explore</h1>
+								<a href="#page-content" class="scroll-down-btn" style="color: white; font-size: 24px; text-decoration: none;">
+									<i class="fas fa-chevron-down"></i>
+								</a>
+							</div>
+							<!-- End explore text and arrow -->
+
 						</div> <!-- /.page-header-inner -->
 
 						<!-- Begin scroll down circle (you can change "data-offset" to set scroll top offset) 
@@ -407,7 +416,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-1.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-1.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-1.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-1.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -442,7 +451,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-2.png" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-2.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-2.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-2.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -477,7 +486,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-3.png" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-3.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-3.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-3.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -512,7 +521,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-4.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-4.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-4.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-4.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -547,7 +556,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-5.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-5.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-5.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-5.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -582,7 +591,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-6.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-6.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-6.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-6.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -617,7 +626,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-7.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-7.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-7.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-7.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -652,7 +661,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-8.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-8.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-8.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-8.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -687,7 +696,7 @@
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-image ttgr-height">
-																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-9.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/category-thumbnails/category-9.jpg" alt="image">
+																		<img class="tt-lazy" src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-9.jpg" data-src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-9.jpg" alt="image">
 																	</figure> <!-- /.pgi-image -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
@@ -719,6 +728,84 @@
 						</div>
 						<!-- End tt-section -->
 
+						<!-- Begin team section -->
+						<div id="team" class="tt-section bg-white-accent-3 padding-top-xlg-150 padding-bottom-xlg-200">
+							<div class="tt-section-inner tt-wrap max-width-1700">
+								<div class="tt-heading tt-heading-lg tt-heading-center margin-bottom-7-p anim-fadeinup">
+									<h3 class="tt-heading-subtitle text-gray">Our Team</h3>	
+									<h2 class="tt-heading-title">Meet the Crew</h2>
+								</div>
+
+								<div class="team-grid">
+									<div class="team-member">
+										<div class="team-image-wrap">
+											<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/team/Surya.jpg" alt="Team Member" class="team-image">
+										</div>
+										<div class="team-info">
+											<h3 class="team-name">Suryadip Panda</h3>
+											<p class="team-role">CEO & Co-Founder (Cinematographer)</p>
+											<p class="team-bio">CEO, Co-Founder, Cinematographer, Colorist and probably the guy who fixes the coffee machine too. When he's not busy building empires, he's behind the camera making magic happen (and occasionally tripping over tripods). Suryadip believes in working hard, dreaming bigger, and laughing through the chaos — because if you can't have fun while running the show, what's the point?</p>
+										</div>
+									</div>
+
+									<div class="team-member">
+										<div class="team-image-wrap">
+											<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/team/Kunal.jpg" alt="Team Member" class="team-image">
+										</div>
+										<div class="team-info">
+											<h3 class="team-name">Kunal Mahto</h3>
+											<p class="team-role">CEO & Co-Founder (Management)</p>
+											<p class="team-bio">CEO, Co-Founder, Manager Extraordinaire, and the unsung hero who keeps the chaos from becoming a full-blown circus. When he's not saving the team from total management meltdowns, he's behind the camera or deep into editing mode (probably with three cups of coffee and a playlist that screams focus). Kunal's motto? "Stay calm, stay creative — and make it look easy while you're at it."</p>
+										</div>
+									</div>
+
+									<div class="team-member">
+										<div class="team-image-wrap">
+											<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/team/Sneha.jpg" alt="Team Member" class="team-image">
+										</div>
+										<div class="team-info">
+											<h3 class="team-name">Sneha Maji</h3>
+											<p class="team-role">Editor</p>
+											<p class="team-bio">Editor, emotional candle collector, and part-time speed ramping champion (seriously, she's probably still ramping as you read this). She edits with heart, lives with drama, and somehow manages to fight with her beloved dog Luna more than with actual people. If she's not lost in a timeline or talking to her dog like a human, you'll find her living her best life... probably inside a Dmart aisle, surrounded by snacks and scented candles.</p>
+										</div>
+									</div>
+
+									<div class="team-member">
+										<div class="team-image-wrap">
+											<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/team/Roza.jpg" alt="Team Member" class="team-image">
+										</div>
+										<div class="team-info">
+											<h3 class="team-name">J B Roza</h3>
+											<p class="team-role">VFX Supervisor</p>
+											<p class="team-bio">Visual Effects Supervisor who spends her days bossing around invisible monsters & fixing explosions frame by frame. She's wildly dedicated to her craft & equally dedicated to eating cake whenever possible. If she's not tweaking pixels, she's probably hunting for the next best dessert. If you see a perfect VFX shot & a missing slice of cake, Roza was there.</p>
+										</div>
+									</div>
+
+									<div class="team-member">
+										<div class="team-image-wrap">
+											<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/team/Devdeep.jpg" alt="Team Member" class="team-image">
+										</div>
+										<div class="team-info">
+											<h3 class="team-name">Devdeep Maiti</h3>
+											<p class="team-role">Graphic Designer</p>
+											<p class="team-bio">Graphic Designer, certified sweetheart of the team, and unofficial "most likely to be late because he's still fixing his hair." His designs are sharp, clean, and ready on time — unlike him, if you're waiting to leave for a shoot. But hey, when you look that good and design even better, a little extra mirror time is basically a professional requirement.</p>
+										</div>
+									</div>
+
+									<div class="team-member">
+										<div class="team-image-wrap">
+											<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/team/Noah.jpg" alt="Team Member" class="team-image">
+										</div>
+										<div class="team-info">
+											<h3 class="team-name">Noah</h3>
+											<p class="team-role">Motion & Web Designer</p>
+											<p class="team-bio">Motion Designer, Web Developer, and the unofficial "Ease In, Ease Out" philosopher of the team (seriously, he probably animates his own coffee refills). Fueled by creativity, caffeine, and the occasional "wait, what does that Hindi word mean?" moment, Noah keeps the ideas flowing smoother than his playback renders. When he's not designing magic, he's at home being bossed around by his two cats — because even the most productive guy needs supervisors.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End team section -->
 
 						<!-- =======================
 						///// Begin tt-section /////
@@ -743,7 +830,7 @@
 
 									<!-- Use if destination page contains page header image -->
 									<div class="tt-pn-image">
-										<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/cursor.jpg" alt="image">
+										<img src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/cursor.jpg" alt="image">
 									</div>
 								</div>
 								<!-- End page nav -->
@@ -853,7 +940,200 @@
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
 
+		<style>
+			@media (max-width: 768px) {
+				.explore-section {
+					display: block !important;
+				}
+			}
 
+			/* Team Section Styles */
+			.team-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 30px;
+				justify-content: center;
+				position: relative;
+			}
+
+			.team-member {
+				flex: 1;
+				min-width: 150px;
+				max-width: 200px;
+				text-align: center;
+				position: relative;
+				transition: all 0.5s ease;
+				cursor: pointer;
+			}
+
+			.team-image-wrap {
+				width: 100%;
+				height: 300px;
+				overflow: hidden;
+				margin-bottom: 20px;
+				position: relative;
+			}
+
+			.team-image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.3s ease;
+			}
+
+			.team-info {
+				padding: 0 10px;
+				position: relative;
+				z-index: 1;
+			}
+
+			.team-name {
+				font-size: 18px;
+				margin-bottom: 5px;
+				color: #fff;
+				transition: all 0.3s ease;
+			}
+
+			.team-role {
+				font-size: 14px;
+				color: #666;
+				margin: 0 0 10px 0;
+				transition: all 0.3s ease;
+			}
+
+			/* First 3 members - bio on right */
+			.team-member:nth-child(-n+3) .team-bio {
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 300px;
+				background: rgba(0, 0, 0, 0.9);
+				padding: 20px;
+				font-size: 14px;
+				color: #fff;
+				line-height: 1.6;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s ease;
+				z-index: 2;
+				transform: translateX(-20px);
+			}
+
+			/* Last 3 members - bio on left */
+			.team-member:nth-child(n+4) .team-bio {
+				position: absolute;
+				top: 0;
+				right: 100%;
+				width: 300px;
+				background: rgba(0, 0, 0, 0.9);
+				padding: 20px;
+				font-size: 14px;
+				color: #fff;
+				line-height: 1.6;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s ease;
+				z-index: 2;
+				transform: translateX(20px);
+			}
+
+			.team-member:hover {
+				transform: scale(1.05);
+				z-index: 10;
+			}
+
+			.team-member:hover .team-bio {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+
+			.team-member:hover .team-role {
+				color: #fff;
+			}
+
+			.team-grid:hover .team-member:not(:hover) {
+				opacity: 0.3;
+				transform: scale(0.95);
+			}
+
+			@media (max-width: 1200px) {
+				.team-member {
+					min-width: 140px;
+					max-width: 180px;
+				}
+				.team-bio {
+					width: 250px;
+				}
+			}
+
+			@media (max-width: 992px) {
+				.team-member {
+					min-width: 120px;
+					max-width: 160px;
+				}
+				.team-bio {
+					width: 200px;
+					font-size: 12px;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.team-grid {
+					gap: 20px;
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+				.team-member {
+					min-width: 140px;
+					max-width: 180px;
+					width: calc(50% - 10px);
+				}
+				.team-image-wrap {
+					height: 220px;
+				}
+				.team-bio {
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+					max-width: 400px;
+					background: rgba(0, 0, 0, 0.95);
+					padding: 30px;
+					text-align: center;
+				}
+				.team-member:hover .team-bio {
+					transform: translate(-50%, -50%);
+				}
+				.team-name {
+					font-size: 18px;
+				}
+				.team-role {
+					font-size: 14px;
+					color: #fff;
+				}
+			}
+
+			@media (max-width: 576px) {
+				.team-grid {
+					gap: 15px;
+				}
+				.team-member {
+					min-width: 120px;
+					max-width: 160px;
+					width: calc(50% - 7.5px);
+				}
+				.team-image-wrap {
+					height: 200px;
+				}
+				.team-bio {
+					width: 90%;
+					padding: 20px;
+				}
+			}
+		</style>
 
 	</body>
 
