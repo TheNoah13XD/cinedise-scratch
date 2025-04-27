@@ -989,6 +989,50 @@
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
 
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const teamMembers = document.querySelectorAll('.team-member');
+				const modal = document.createElement('div');
+				modal.className = 'bio-modal';
+				modal.innerHTML = `
+					<div class="bio-modal-content">
+						<span class="bio-modal-close">&times;</span>
+						<h2 class="bio-modal-name"></h2>
+						<p class="bio-modal-role"></p>
+						<p class="bio-modal-bio"></p>
+					</div>
+				`;
+				document.body.appendChild(modal);
+
+				teamMembers.forEach(member => {
+					member.addEventListener('click', function() {
+						const name = this.querySelector('.team-name').textContent;
+						const role = this.querySelector('.team-role').textContent;
+						const bio = this.querySelector('.team-bio').textContent;
+						
+						modal.querySelector('.bio-modal-name').textContent = name;
+						modal.querySelector('.bio-modal-role').textContent = role;
+						modal.querySelector('.bio-modal-bio').textContent = bio;
+						
+						modal.style.display = 'block';
+						document.body.style.overflow = 'hidden';
+					});
+				});
+
+				modal.querySelector('.bio-modal-close').addEventListener('click', function() {
+					modal.style.display = 'none';
+					document.body.style.overflow = '';
+				});
+
+				modal.addEventListener('click', function(e) {
+					if (e.target === modal) {
+						modal.style.display = 'none';
+						document.body.style.overflow = '';
+					}
+				});
+			});
+		</script>
+
 		<style>
 			@media (max-width: 768px) {
 				.explore-section {
@@ -1129,57 +1173,133 @@
 
 			@media (max-width: 768px) {
 				.team-grid {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
 					gap: 20px;
-					flex-direction: row;
-					flex-wrap: wrap;
-					justify-content: center;
+					padding: 0 15px;
 				}
 				.team-member {
-					min-width: 140px;
-					max-width: 180px;
-					width: calc(50% - 10px);
+					width: 100%;
+					position: relative;
+					background: rgba(0, 0, 0, 0.8);
+					border-radius: 8px;
+					padding: 15px;
+					transition: all 0.3s ease;
+					cursor: pointer;
 				}
 				.team-image-wrap {
-					height: 220px;
+					width: 100%;
+					height: 200px;
+					margin-bottom: 15px;
+					border-radius: 8px;
+					overflow: hidden;
 				}
-				.team-bio {
-					position: fixed;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					width: 80%;
-					max-width: 400px;
-					background: rgba(0, 0, 0, 0.95);
-					padding: 30px;
+				.team-image {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transition: transform 0.3s ease;
+				}
+				.team-info {
 					text-align: center;
-				}
-				.team-member:hover .team-bio {
-					transform: translate(-50%, -50%);
 				}
 				.team-name {
 					font-size: 18px;
+					margin-bottom: 5px;
+					color: #fff;
 				}
 				.team-role {
 					font-size: 14px;
 					color: #fff;
+					margin-bottom: 10px;
+					opacity: 0.8;
+				}
+				.team-bio {
+					display: none;
+				}
+				.team-member:hover {
+					transform: scale(1.02);
+				}
+
+				/* Bio Modal Styles */
+				.bio-modal {
+					display: none;
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgba(0, 0, 0, 0.9);
+					z-index: 1000;
+					overflow-y: auto;
+				}
+				.bio-modal-content {
+					position: relative;
+					background: rgba(255, 255, 255, 0.1);
+					margin: 20px;
+					padding: 20px;
+					border-radius: 12px;
+					color: #fff;
+					max-width: 500px;
+					margin: 20px auto;
+				}
+				.bio-modal-close {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					color: #fff;
+					font-size: 24px;
+					cursor: pointer;
+					z-index: 1001;
+				}
+				.bio-modal-name {
+					font-size: 24px;
+					margin-bottom: 10px;
+					text-align: center;
+				}
+				.bio-modal-role {
+					font-size: 16px;
+					margin-bottom: 15px;
+					text-align: center;
+					opacity: 0.8;
+				}
+				.bio-modal-bio {
+					font-size: 16px;
+					line-height: 1.6;
+					opacity: 0.9;
 				}
 			}
 
 			@media (max-width: 576px) {
 				.team-grid {
 					gap: 15px;
+					padding: 0 10px;
 				}
 				.team-member {
-					min-width: 120px;
-					max-width: 160px;
-					width: calc(50% - 7.5px);
+					padding: 12px;
 				}
 				.team-image-wrap {
-					height: 200px;
+					height: 180px;
+					margin-bottom: 12px;
 				}
-				.team-bio {
-					width: 90%;
-					padding: 20px;
+				.team-name {
+					font-size: 16px;
+				}
+				.team-role {
+					font-size: 13px;
+				}
+				.bio-modal-content {
+					margin: 15px;
+					padding: 15px;
+				}
+				.bio-modal-name {
+					font-size: 20px;
+				}
+				.bio-modal-role {
+					font-size: 14px;
+				}
+				.bio-modal-bio {
+					font-size: 14px;
 				}
 			}
 		</style>
